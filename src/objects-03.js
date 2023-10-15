@@ -24,7 +24,15 @@
  * example: getVolumeOfBox({length: 2.4, width: 3, height: 1.8}) // => 12.96
  */
 function getVolumeOfBox(box) {
-  // write your code here & return value
+  const { length, width, height } = box;
+
+  // Calculate the volume
+  const volume = length * width * height;
+
+  // Round the volume to 2 decimal places
+  const roundedVolume = Math.round(volume * 100) / 100;
+
+  return roundedVolume;
 }
 
 module.exports = {
